@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive data visualizations on the economic, scientific and societal impact of AI. Data Visualization course project, Università di Genova.">
+    <meta name="theme-color" content="#002677">
+    <title>Mapping the Impact of AI through Data</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&amp;family=Roboto+Slab:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#overview">Skip to content</a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="container site-nav-inner">
+            <a class="site-nav-brand" href="#top">Mapping the Impact of AI</a>
+            <ul class="site-nav-links">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#data">Data sources</a></li>
+                <li><a href="#visualizations">Visualizations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <!-- Decorative network; all styling lives in styles.css -->
+        <svg class="hero-network" viewBox="0 0 400 320" aria-hidden="true" focusable="false">
+            <g class="net-links">
+                <line x1="60" y1="200" x2="140" y2="110"/>
+                <line x1="140" y1="110" x2="230" y2="170"/>
+                <line x1="230" y1="170" x2="320" y2="80"/>
+                <line x1="230" y1="170" x2="340" y2="230"/>
+                <line x1="230" y1="170" x2="200" y2="270"/>
+                <line x1="200" y1="270" x2="110" y2="290"/>
+                <line x1="60" y1="200" x2="110" y2="290"/>
+                <line x1="140" y1="110" x2="250" y2="40"/>
+                <line x1="250" y1="40" x2="320" y2="80"/>
+                <line x1="320" y1="80" x2="340" y2="230"/>
+                <line x1="30" y1="90" x2="140" y2="110"/>
+                <line x1="60" y1="200" x2="200" y2="270"/>
+            </g>
+            <g class="net-nodes">
+                <circle class="node-sky" cx="60" cy="200" r="8"/>
+                <circle class="node-white" cx="140" cy="110" r="10"/>
+                <circle class="node-core" cx="230" cy="170" r="15"/>
+                <circle class="node-sky" cx="320" cy="80" r="9"/>
+                <circle class="node-white" cx="340" cy="230" r="7"/>
+                <circle class="node-sky" cx="200" cy="270" r="9"/>
+                <circle class="node-white" cx="110" cy="290" r="6"/>
+                <circle class="node-white" cx="250" cy="40" r="6"/>
+                <circle class="node-sky" cx="30" cy="90" r="5"/>
+            </g>
+        </svg>
+
+        <div class="container hero-inner">
+            <h1>Mapping the Impact of AI through Data</h1>
+            <p class="subtitle">Group <span class="placeholder">[group name]</span></p>
+            <ul class="team" aria-label="Team members">
+                <li>Mohammad Hashemi</li>
+                <li>Amirhossein Mahdinejad</li>
+                <li>Mehrsa Malekzadeh Amoli</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" id="overview" aria-labelledby="overview-title">
+            <div class="container section-grid">
+                <div class="section-head">
+                    <h2 id="overview-title">Project overview</h2>
+                </div>
+                <div class="section-body">
+                    <p class="lead">
+                        Artificial Intelligence is reshaping society quickly. To understand where it is heading and what footprint it leaves, we need to look at the data.
+                    </p>
+                    <p>
+                        This project turns abstract numbers into visual narratives. Each visualization examines a different side of AI's impact:
+                    </p>
+                    <ul class="topic-list">
+                        <li>How AI is changing economic landscapes</li>
+                        <li>How AI research and development is growing and spreading</li>
+                        <li>How companies and countries adopt AI technology</li>
+                    </ul>
+                    <p>
+                        The website grows with the course: roughly every week we add a secondary page that explores the data with a different visualization type.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="data" aria-labelledby="data-title">
+            <div class="container section-grid">
+                <div class="section-head">
+                    <h2 id="data-title">Data sources</h2>
+                </div>
+                <div class="section-body">
+                    <p>
+                        Our analyses rely on five authoritative platforms.
+                    </p>
+                    <ul class="source-list">
+                        <li>
+                            <a href="https://hai.stanford.edu/ai-index/2026-ai-index-report" target="_blank" rel="noopener">Stanford AI Index Report (2026)</a>
+                            <span>Comprehensive metrics on global AI research and development.</span>
+                        </li>
+                        <li>
+                            <a href="https://ourworldindata.org/search?topics=Artificial+Intelligence&amp;resultType=all" target="_blank" rel="noopener">Our World in Data: Artificial Intelligence</a>
+                            <span>Societal impacts and long-term AI trends.</span>
+                        </li>
+                        <li>
+                            <a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table?lang=en" target="_blank" rel="noopener">Eurostat</a>
+                            <span>AI adoption and usage in European enterprises.</span>
+                        </li>
+                        <li>
+                            <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" target="_blank" rel="noopener">Anthropic Economic Index (Hugging Face)</a>
+                            <span>Economic data on how AI is used across occupations and tasks.</span>
+                        </li>
+                        <li>
+                            <a href="https://oecd.ai/en/" target="_blank" rel="noopener">OECD.AI</a>
+                            <span>Policy observatory data on global AI investment and incidents.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="visualizations" aria-labelledby="viz-title">
+            <div class="container section-grid">
+                <div class="section-head">
+                    <h2 id="viz-title">Visualizations</h2>
+                </div>
+                <div class="section-body">
+                    <p>
+                        Each secondary page applies a different visual idiom to one of our datasets. The pages below are in preparation.
+                    </p>
+
+                    <article class="viz">
+                        <p class="status">Coming soon</p>
+                        <h3>Visualization 1: Exploring categorical AI trends</h3>
+                        <p>
+                            This page explores categorical and relational data. We map how AI research publications are distributed across academic disciplines using a <strong>network graph</strong> or a <strong>treemap</strong>.
+                        </p>
+                    </article>
+
+                    <article class="viz">
+                        <p class="status">Coming soon</p>
+                        <h3>Visualization 2: Continuous variables over time</h3>
+                        <p>
+                            This page analyzes the exponential growth of private AI investment over the last decade. An interactive <strong>streamgraph</strong> or <strong>multi-line chart</strong> will show these continuous trends over time.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Università di Genova &middot; Data Visualization</p>
+        </div>
+    </footer>
+</body>
+</html>

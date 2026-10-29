@@ -1,0 +1,403 @@
+/* ==========================================================
+   Mapping the Impact of AI through Data
+   Styled after the UniGe visual identity (id.unige.it)
+   Headings: Roboto Slab | Text: Fira Sans
+   ========================================================== */
+
+:root {
+    /* Official UniGe colors */
+    --unige-blue: #002677;
+    --unige-yellow: #F4DA40;
+    --unige-sky: #199BFC;
+    --unige-ink: #25282A;
+    --unige-gray: #D9D9D6;
+
+    /* Derived neutrals */
+    --ink-muted: #4a5057;
+    --surface: #ffffff;
+    --surface-alt: #f2f4f7;
+    --on-blue-muted: #c9d2e6;
+
+    --font-heading: "Roboto Slab", serif;
+    --font-body: "Fira Sans", sans-serif;
+    --container: 68rem;
+    --nav-height: 3.5rem;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-height) + 1rem);
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--unige-ink);
+    background: var(--surface);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1.25rem;
+    max-width: 65ch;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: var(--unige-blue);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: var(--unige-sky);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 0.2s;
+}
+
+a:hover {
+    text-decoration-color: var(--unige-yellow);
+    text-decoration-thickness: 4px;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--unige-sky);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 100;
+    padding: 0.5rem 1rem;
+    background: var(--unige-yellow);
+    color: var(--unige-ink);
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* ---------- Navigation ---------- */
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--unige-blue);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.site-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    min-height: var(--nav-height);
+}
+
+.site-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.site-nav a:focus-visible {
+    outline-color: var(--unige-yellow);
+}
+
+.site-nav-brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.site-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.75rem;
+}
+
+.site-nav-links a {
+    padding: 0.25rem 0;
+    border-bottom: 3px solid transparent;
+}
+
+.site-nav-links a:hover {
+    border-bottom-color: var(--unige-yellow);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--unige-blue);
+    color: #ffffff;
+    padding: 5.5rem 0 6rem;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-inner::before {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.4rem;
+    margin-bottom: 1.75rem;
+    background: var(--unige-yellow);
+}
+
+.hero h1 {
+    max-width: 13em;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.subtitle {
+    margin: 1.75rem 0 0.5rem;
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+.placeholder {
+    border-bottom: 2px dashed var(--unige-yellow);
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0;
+    color: var(--on-blue-muted);
+}
+
+.team li:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 1em;
+    margin: 0 1rem;
+    vertical-align: -0.12em;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Decorative network (SVG styled only via selectors) */
+.hero-network {
+    position: absolute;
+    top: 50%;
+    right: max(1rem, calc(50% - 38rem));
+    z-index: 1;
+    width: min(28rem, 45vw);
+    height: auto;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.hero-network .net-links line {
+    stroke: rgba(255, 255, 255, 0.28);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+}
+
+.hero-network .node-sky {
+    fill: var(--unige-sky);
+}
+
+.hero-network .node-white {
+    fill: #ffffff;
+    fill-opacity: 0.85;
+}
+
+.hero-network .node-core {
+    fill: var(--unige-yellow);
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.18); }
+}
+
+/* ---------- Sections ---------- */
+.section {
+    padding: 4.5rem 0;
+}
+
+.section-alt {
+    background: var(--surface-alt);
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+    gap: 1.5rem 3rem;
+}
+
+.section h2 {
+    font-size: 1.75rem;
+    color: var(--unige-blue);
+}
+
+.section h2::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 0.25rem;
+    margin-top: 0.75rem;
+    background: var(--unige-yellow);
+}
+
+.lead {
+    font-size: 1.3rem;
+    line-height: 1.55;
+    color: var(--unige-ink);
+}
+
+/* ---------- Overview topics ---------- */
+.topic-list {
+    margin: 0 0 1.5rem;
+    border-left: 4px solid var(--unige-sky);
+    padding-left: 1.25rem;
+}
+
+.topic-list li {
+    padding: 0.2rem 0;
+    font-weight: 500;
+}
+
+/* ---------- Data sources ---------- */
+.source-list {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--unige-gray);
+}
+
+.source-list li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 0.25rem 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--unige-gray);
+}
+
+.source-list a {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.source-list span {
+    color: var(--ink-muted);
+}
+
+/* ---------- Visualizations ---------- */
+.viz {
+    margin-top: 1.75rem;
+    padding: 1.75rem 2rem 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--unige-gray);
+    border-top: 6px solid var(--unige-blue);
+}
+
+.viz h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+    color: var(--unige-blue);
+}
+
+.viz .status {
+    display: inline-block;
+    margin: 0 0 0.75rem;
+    padding: 0.1rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: var(--unige-yellow);
+    color: var(--unige-ink);
+    border-radius: 0.25rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    padding: 2rem 0;
+    background: var(--unige-ink);
+    color: var(--unige-gray);
+    font-size: 0.95rem;
+}
+
+.site-footer p {
+    margin: 0;
+    max-width: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 52rem) {
+    .section-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .source-list li {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-network {
+        opacity: 0.35;
+        width: 22rem;
+    }
+}
+
+@media (max-width: 36rem) {
+    .site-nav-brand {
+        display: none;
+    }
+
+    .hero {
+        padding: 3.5rem 0 4rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .viz {
+        padding: 1.25rem 1.25rem 0.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-network .node-core {
+        animation: none;
+    }
+}
